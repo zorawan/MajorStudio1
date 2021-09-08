@@ -14,7 +14,4 @@ Using a bar chart to show the sizes of all the iris flowers in order to compare 
 3. Defind three colors for species. in newChild
 4. Append newChild
   
-   Markup : 1. A numbered list
-              1. A nested numbered list
-              2. Which is numbered
-          2. Which is numbered
+
