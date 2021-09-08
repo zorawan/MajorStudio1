@@ -1,7 +1,7 @@
 # Data Visualization Major Studio 1 Fall 2021
 This is my first assignment for Major Studio
 
-<h3>Main Goal: </3>
+###Main Goal:
 Create a visualization to show the data from iris_json file.
 
 <h3>My Idea: </3>
