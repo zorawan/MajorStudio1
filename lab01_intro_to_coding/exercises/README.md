@@ -1,6 +1,6 @@
-# Data Visualization Major Studio 1 Fall 2021
-This is my first assignment for Major Studio
+# This is my first assignment for Major Studioc
 
+Using [ex6_dom_manipulation.js](https://github.com/zorawan/MajorStudio1/blob/main/lab01_intro_to_coding/exercises/ex6_dom_manipulation.js) to create a HTML to display the size of Iris.
 <h3>Main Goal:</h3>
 Create a visualization to show the data from iris_json file.
 
