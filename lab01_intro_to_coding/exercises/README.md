@@ -1,4 +1,4 @@
-# This is my first assignment for Major Studioc
+# First exercise for Major Studio
 
 Using [ex6_dom_manipulation.js](https://github.com/zorawan/MajorStudio1/blob/main/lab01_intro_to_coding/exercises/ex6_dom_manipulation.js) to create a HTML to display the size of Iris.
 <h3>Main Goal:</h3>
