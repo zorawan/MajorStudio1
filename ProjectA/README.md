@@ -14,4 +14,5 @@ Extent Smithsonian, 1927
 ###### Visualization method:
 Images gallery and 3d VR rendering
 To provide an intuitive feeling of the size, using the gallery to display items next to another item will help users compare. Moreover, 3d VR technology will enable users to see it in physical space.
-![1-A](url)
+![ms_sketch1-A](https://user-images.githubusercontent.com/6037803/133909333-e0f8a96b-fc4b-4516-8373-f1e70d5a9e74.jpg)
+
