@@ -85,3 +85,19 @@ From the site [Women of the US National Herbarium](https://naturalhistory.si.edu
 Multi-level donut chart: Use the different sizes of the circle to present the numbers of plants in the higher level (family) category. Each circle represents a donut chart to specify the categories that belong to it. The level of the donut chart depends on the level of the taxonomy. 
 
 ![ms_sketch3-B](https://user-images.githubusercontent.com/6037803/133910052-95e42533-2666-46e4-928e-ff342114418a.jpg)
+
+###### Hi-Fidelity Mocks:
+It's interesting to see the visualization for women who worked in the science field, so I decided to work on idea 3-B. By using the dashboard style, I have more flexibility to add more charts and stories in the future.
+
+**3-A** with single plants in one location.
+
+![MS1_Women_of_the_US_National_Herbarian_3-A_1](https://user-images.githubusercontent.com/6037803/133912039-a67ae66b-f205-4e47-ba95-30d4a3f59261.png)
+
+**3-A** with multiple plants in one location.
+
+![MS1_Women_of_the_US_National_Herbarian_3-A_2](https://user-images.githubusercontent.com/6037803/133912099-1cb48b0b-1dae-4f09-81ef-542b26603e8d.png)
+
+**3-B** Using the multi-level donut chart to show to taxonomy for one scientist.
+
+![MS1_Women_of_the_US_National_Herbarian_3-B_1](https://user-images.githubusercontent.com/6037803/133912133-db892c7b-3c64-4a25-8da7-c5c9be6ceb20.png)
+
