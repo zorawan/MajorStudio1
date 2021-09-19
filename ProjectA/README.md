@@ -18,7 +18,6 @@ To provide an intuitive feeling of the size, using the gallery to display items 
 ![ms_sketch1-A](https://user-images.githubusercontent.com/6037803/133909333-e0f8a96b-fc4b-4516-8373-f1e70d5a9e74.jpg)
 
 
-## Major Studio 1 Sketch Brainstorming 
 
 ##### 1-B: Understand Ceramics
 
