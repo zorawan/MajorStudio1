@@ -5,14 +5,83 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Major Studio 1 - Lab 2 – Fetch Search</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-<style>
-body{ font-family: 'Jost', sans-serif;
-}
-</style>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 </head>
+
 <body>
-  <script src="fetch_search.js"></script>
+
+  <h1 id="myHeader" class="header">
+    <img src="./A_logo.png" alt="logo"  height="36px"  align= "left" padding-left="24px">
+    <span>
+    <img src="./designBy.png" alt="Zora"  height="36px"  align= "right">
+    </span>
+  </h1>
+
+  
+  <div class="sidenav"><p class="navLabel">Scientists</p>
+    <a href="#Mary Agnes Chase">Mary Agnes Chase</a>
+    <a class="active" href="#Velva E. Rudd">Velva E. Rudd</a>
+    <a href="#Kittie F. Parker">Kittie F. Parker</a>
+    <a href="#Marie-Hélène Sachet">Marie-Hélène Sachet</a>
+    <a href="#Beryl B. Simpson">Beryl B. Simpson</a>
+    <a href="#Joan W. Nowicke">Joan W. Nowicke</a>
+    <a href="#Vicki A. Funk">Vicki A. Funk</a>
+    <a href="#Paula T. DePriest">Paula T. DePriest</a>
+    <a href="#Ashley N. Egan">Ashley N. Egan</a>
+  </div>
+
+  <div class="row">
+    <div class="column">
+    
+      <div class="card">
+        <img src="velva-rudd.jpeg" alt="velva" height="100" style="float:left" id= "velva">
+        <span><h2>Velva E. Rudd</h2></span>
+        <h3>A specialist in tropical Leguminosae, began her career in the Botany Department as a technician (1948-1973).  She was later promoted to Assistant Curator and eventually to Curator.  Her extensive work on legume taxonomy is exemplified in a six-part monograph in Contributions from the United States National Herbarium (1955-1968).  The Mexican legume genus, Ruddia, was named in her honor. Her collections includes many species shows in the chart below. 
+          <a href="https://nmnh.typepad.com/the_plant_press/2000/01/plant-press-2000-vol-3-issue-1-9.html">More</a>  
+        </h3>
+        
+        <p id=rowCount></p>
+  
+        
+  
+        <svg width="800" height="600">
+          <svg  x= 200 y= 285 width="499" height="315"  fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M199.5 313.5C146.5 198 18 276.5 1.5 74.5001M199.5 313.5C193.333 253.167 199.5 154.5 199.5 0.5M199.5 313.5C215.167 271 257 106 340.5 57.5M199.5 313.5C354 290 405.7 50.5 498.5 20.5" stroke="#70A928" stroke-width="2"/>
+          </svg>
+          <circle cx="540" cy="340" r="20" fill="#DDBEA9"/ >
+        </svg>
+      </div>
+        
+        <div id="tooltip"></div>
+        <svg id="legend" width="500" height="40">
+          <text x="0" y="15" fill="#20221C">Taxonomy Color Code:</text>
+          <rect x="200" width="20" height="20" style="fill:#D6AE99;" />
+          <rect x="300" width="20" height="20" style="fill:#FFAE70;" />
+          <rect x="400" width="20" height="20" style="fill:#C9C9BA;" />
+          <text x="230" y="15" fill="#20221C">Class</text>
+          <text x="330" y="15" fill="#20221C">Order</text>
+          <text x="430" y="15" fill="#20221C">Family</text>
+        </svg>
+        <p class=name>Velva E. Rudd</p>
+      </div>
+    
+  </div>
+  
+  <div class="row">
+    <div class="column">
+      <div class="card">
+        <h3>Collection by Location</h3>
+        <div id='map'></div>
+        <div id="tooltip"></div>
+        <p class=name>Velva E. Rudd's Footprint</p>
+      </div>
+    </div>
+  </div>
+  <script src="./pie.js" ></script>
 </body>
 </html>
