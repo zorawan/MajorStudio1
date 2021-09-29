@@ -108,4 +108,8 @@ It's interesting to see the visualization for women who worked in the science fi
 
 ![MS1_Women_of_the_US_National_Herbarian_3-B_1](https://user-images.githubusercontent.com/6037803/133912133-db892c7b-3c64-4a25-8da7-c5c9be6ceb20.png)
 
+###### Prototype Screenshot:
 
+**3-B** Iterating the idea and keep the concept which explain the taxonomy in three rings. Each of the ring represent the Order, Class, and Family for the plants in the order of the sizes.
+
+![webshot_1](https://user-images.githubusercontent.com/6037803/135182095-5bb741cd-9394-4bc2-99f0-e9ec749d4a7f.png)
