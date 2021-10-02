@@ -100,7 +100,7 @@ function draw(data_json,radius, x, y, color_array) {
         }
     }
     if (other > 0){
-            var item = { 'name': 'Others' + "", 'count': other };
+            var item = { 'name': 'Others < 1' + "", 'count': other };
             data.push(item);
     }
     data.sort(function compareFn(a, b) {  return a.count - b.count});
