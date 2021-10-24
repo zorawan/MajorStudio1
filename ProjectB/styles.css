@@ -1,0 +1,66 @@
+@font-face {
+  font-family: 'myFont';
+  src: url('font/hiragino-kaku-gothic-pron-w3.otf')format('otf');
+  font-style: normal;
+  font-weight:normal;
+}
+@font-face{  
+  font-family: 'myFont';
+  src: url('font/hiragino-kaku-gothic-pron-w6.otf') format('otf'); 
+  font-style: normal;
+  font-weight:bold;
+}
+body{
+    background-color: #000;
+    font-family: 'myFont',sans-serif;
+    margin:0;
+}
+h1 {
+    font-family: inherit;
+    font-weight:normal;
+}
+
+.grid-container {
+  display: grid;
+  font-family: inherit;
+  font-weight: normal;
+  grid-template-columns: auto auto auto;
+  color:#fff;
+  padding: 24px;
+}
+#topicLabol{
+    font-family: inherit;
+    font-weight: blod;
+    color:#fff;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 30%;
+  background-color: #000;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  font-family: inherit;
+  font-weight: normal;
+}
+
+li a {
+  display: block;
+  color: #fff;
+  opacity:40%;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+li a.active {
+  color: #fff;
+  opacity: 100%;
+}
+
+li a:hover:not(.active) {
+  color: #fff;
+  opacity: 70%;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scrolling Scrolls</title>
+  <link rel="stylesheet" href="styles.css"></link>
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+
+<body>
+
+<div class="grid-container">
+  <div class="grid-item">
+    <ul>
+      <li><a class="active" href="#tang">Tang (618-906)</a></li>
+      <li><a href="#fLiang">Five Dynasties Later Liang (907-923)</a></li>
+      <li><a href="#fTang">Five Dynasties Later Tang (923-935)</a></li>
+      <li><a href="#liao">Liao (907-1125)</a></li>
+      <li><a href="#nSong">Northern Song (960-1127)</a></li>
+      <li><a href="#sSong">Southern Song (1127-1279)</a></li>
+      <li><a href="#yuan">Yuan (1279-1368)</a></li>
+      <li><a href="#ming">Ming (1368-1644)</a></li>
+      <li><a href="#qing">Qing (1644-1911)</a></li>
+    </ul>
+  </div>
+  <div class="grid-item" id="app">2</div>
+  <div class="grid-item">
+    <div>
+      <svg height="24" width="40"><line x1="0" y1="18" x2="24" y2="18" style="stroke:rgb(255,255,255);stroke-width:2"/></svg>
+      <span>Artist</span>
+    </div>
+    <div>
+      <svg height="24" width="40"></svg>
+      <span id="topicLabol">Topic</span>
+    </div>
+  </div>  
+  
+</div>  
+
+  <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+  <script src= "image_display.js"></script>
+</body>
+</html>
+<text x="40" y="16" fill="#fff">Artist</text>
