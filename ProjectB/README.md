@@ -9,6 +9,7 @@
 * Use the plants' images in botany department and find the images' color to represent plant in the form of a dot.
 * Combining dots and recreate the plant.
 * Mouse over to zoom in to the image.
+<br>
 * ![projectB_2](https://user-images.githubusercontent.com/6037803/138577508-b1bda20f-5f41-481a-9b80-c60a16780e7c.jpg)
 - - - -
 #### Women of the US National Herbarium (Velva E. Dudd's Garden)
