@@ -38,3 +38,23 @@
 * The paintings' name shows on the right side of the screen when hoving.
 * All the scrolls listed by time and can be navigate through the left dragging bar.
 * ![projectB_7](https://user-images.githubusercontent.com/6037803/138577518-43479d46-328c-4f1c-81f2-166ad9fef21f.jpg)
+- - - -
+### Mockup iteration
+Moving forward with the idea: Scrolling scrolls of Chinese Paintings 
+
+#### Version 1
+* Define the elements on the screen: timeline with dynasties, iamges, title, artist, medium, topics.
+![idea1_v2](https://user-images.githubusercontent.com/6037803/138578319-05dfb759-e1eb-4053-baf7-3ff0d578c2d9.png)
+- - - -
+#### Version 2
+* Iterating the timeline and add more transparent blocks to represent images.
+![idea1_v3](https://user-images.githubusercontent.com/6037803/138578320-71934e2b-c000-4447-8949-a6a2b568cccd.png)
+- - - -
+#### Version 3
+* Updating the timeline which use the iamges' title as a navigation.
+* Remove medium since almost all the Chinese paintings were painted by ink and silk. 
+![idea1_v4_1](https://user-images.githubusercontent.com/6037803/138578321-2dfaf68e-72e6-4ffe-9fe5-0adbfec86096.png)
+- - - -
+### Prototype
+* Clickable figma prototype based on the version3 mockup:
+[Version 3 with interaction](https://www.figma.com/proto/GM5z2EksfVAiYP5HPmiwDR/Project-B?page-id=0%3A1&node-id=147%3A383&viewport=284%2C48%2C0.25&scaling=contain&starting-point-node-id=119%3A239)
