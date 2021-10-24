@@ -4,7 +4,7 @@
 * One color represents a woman's clothing from a painting.
 * ≈ 2000 objects.
 * ![projectB_1](https://user-images.githubusercontent.com/6037803/138577449-edc0d1ba-690c-41bc-bccd-8118a63f37c1.jpg)
-Markup :  - - - -
+- - - -
 #### Color of plants
 * Use the plants' images in botany department and find the images' color to represent plant in the form of a dot.
 * Combining dots and recreate the plant.
