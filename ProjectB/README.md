@@ -41,6 +41,9 @@
 - - - -
 #### Scrolling Scrolls of Chinese Paintings
 * Scroll the screen to see 500 Chinese Paintings over time.
+* Date Source: Freer Gallery of Art and Arthur M. Sackler Gallery
+* Type: Painting
+* Culture: chinese
 * The paintings' name shows on the right side of the screen when hoving.
 * All the scrolls listed by time and can be navigate through the left dragging bar.
   <br></br>
