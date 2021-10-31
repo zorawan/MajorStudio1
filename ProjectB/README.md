@@ -73,6 +73,7 @@ Moving forward with the idea: Scrolling scrolls of Chinese Paintings
 [Version 3 with interaction](https://www.figma.com/proto/GM5z2EksfVAiYP5HPmiwDR/Project-B?page-id=0%3A1&node-id=147%3A383&viewport=284%2C48%2C0.25&scaling=contain&starting-point-node-id=119%3A239)
 - - - -
 ### Implementation Screenshot
+<br></br>
 * After working on code, I remove the artist and the timeline on left. I use the ul tag instead.
 * Adding the title "Scrolling scrolls" and the description on top.
 ![idea1_v4_prototype_shot](https://user-images.githubusercontent.com/6037803/139563329-bce9bb50-9c6f-42cb-9df8-a9629ae170f6.png)
