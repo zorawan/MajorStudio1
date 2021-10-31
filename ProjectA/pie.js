@@ -1,44 +1,22 @@
-/* global d3*/
-/* global fetch*/
-
-// Smithsonian API example code
-// check API documentation for search here: http://edan.si.edu/openaccess/apidocs/#api-search-search
-
-// put your API key here;
-const API_KEY = 'H9sDGWfc38fa6QB8jQ7O2Pb20ZbPzeHWtgVD4psd'
-
-
-// search base URL
-const searchBaseURL = "https://api.si.edu/openaccess/api/v1.0/search";
-
-// Constructing the search query
-const search =  `"Velva E. Rudd" AND unit_Code: "NMNHBOTANY" AND online_media_type:"Images"`;
-
+/*global d3*/
 var tax_order_array = {};
 var tax_class_array = {};
 var tax_family_array = {};
-var total = 0;
 var geoLocation = [];
 
 // https://collections.si.edu/search/results.htm?q=Flowers&view=grid&fq=data_source%3A%22Cooper+Hewitt%2C+Smithsonian+Design+Museum%22&fq=online_media_type%3A%22Images%22&media.CC0=true&fq=object_type:%22Embroidery+%28visual+works%29%22
 
 
-// search: fetches an array of terms based on term category
-function fetchSearchData(searchTerm, start) {
-    var count = 1000;
-    let url = encodeURI(searchBaseURL + "?api_key=" + API_KEY + "&q=" + searchTerm + "&rows=" + count + "&start=" + start);
-    console.log(url);
+
 
     async function getData() {
         try{
   
-        		const response = await fetch(url)
-        		    .then(res => res.json())
-        		    .then(data => {
+        	d3.json("./data.json").then(data => {
         		        console.log(data);
-                		var array = data["response"]["rows"];
+                		
                       
-                        array.map((item) => {
+                        data.map((item) => {
                          const tax_order = item["content"]["indexedStructured"]["tax_order"][0];
                          tax_order_array[tax_order] = tax_order_array[tax_order] ? tax_order_array[tax_order] + 1 : 1;
                      
@@ -53,24 +31,18 @@ function fetchSearchData(searchTerm, start) {
                         });
                         
                        
-                        total += count;
-                        var rowCount = data["response"]["rowCount"];
-                        console.log("totaal: " + total + "; rowCount=" + rowCount);
-                        if (total < rowCount) {
-                            fetchSearchData(searchTerm, total);
-                        } 
-                        else {
-                            console.log(geoLocation);
-                            
-                            draw(tax_class_array,150, 400, 180, ["#D6AE99","#D0A38A","#CB977C","#C58C6D","#BF805F"]);
-                            draw(tax_order_array,100, 150, 300, ["#FFE8D6","#FFDCC2","#FFD1AD","#FFC599","#FFBA85","#FFAE70"]);
-                            draw(tax_family_array,90, 700, 250, ["#C9C9BA","#C0C0AF","#B7B7A4","#AEAE98","#A5A58D","#9C9C81"]);
+
                         
+                            
+                        draw(tax_class_array,150, 400, 180, ["#D6AE99","#D0A38A","#CB977C","#C58C6D","#BF805F"]);
+                        draw(tax_order_array,100, 150, 300, ["#FFE8D6","#FFDCC2","#FFD1AD","#FFC599","#FFBA85","#FFAE70"]);
+                        draw(tax_family_array,90, 700, 250, ["#C9C9BA","#C0C0AF","#B7B7A4","#AEAE98","#A5A58D","#9C9C81"]);
+                    
                         var title = document.getElementById("rowCount");
-                        var text = document.createTextNode("TOTAL PLANTS: " +rowCount);
+                        var text = document.createTextNode("TOTAL PLANTS: " + data.length);
                         title.appendChild(text);
                         
-                      }    
+                      
                     } 
         		    );
     }
@@ -78,12 +50,8 @@ function fetchSearchData(searchTerm, start) {
         console.log(error);
     }
     }
- getData();
 
-}
-
-fetchSearchData(search, 0);
-
+getData();
 function draw(data_json,radius, x, y, color_array) {
     //var radius = 100;
     var data = [];
@@ -130,7 +98,7 @@ function draw(data_json,radius, x, y, color_array) {
         .append("g")
         .attr("class", "arc")
         .on("mouseover", (e,d)=>{
-            // console.log(e)
+             console.log(e);
             console.log(d.data);
             tooldiv.style("visibility","visible")
             .text( d.data.name + ": " + d.data.count);
@@ -143,6 +111,7 @@ function draw(data_json,radius, x, y, color_array) {
         .on("mouseout",()=>{
             tooldiv.style("visibility","hidden");
         });
+        
     arcs.append("path")
         .attr("d", path)
         .attr("fill", function(d, i) { return color(i); })
@@ -170,7 +139,7 @@ function draw(data_json,radius, x, y, color_array) {
         .style("color", "#70A928")
         .style("border-radius", "6px")
         .style("padding", "12px")
-        .style("box-shadow", "0px 2px 0px #C2C2FF")
+        .style("box-shadow", "0px 2px 0px #C2C2FF");
 }    
 
 
