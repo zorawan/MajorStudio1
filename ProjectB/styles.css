@@ -1,66 +1,118 @@
-@font-face {
-  font-family: 'myFont';
-  src: url('font/hiragino-kaku-gothic-pron-w3.otf')format('otf');
-  font-style: normal;
-  font-weight:normal;
-}
-@font-face{  
-  font-family: 'myFont';
-  src: url('font/hiragino-kaku-gothic-pron-w6.otf') format('otf'); 
-  font-style: normal;
-  font-weight:bold;
-}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500&family=Noto+Sans+TC:wght@300;400;500&family=Noto+Sans:wght@400;700&family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 body{
     background-color: #000;
-    font-family: 'myFont',sans-serif;
+    font-family: 'Spartan', 'Noto Sans','Noto Sans SC','Noto Sans TC',sans-serif;
     margin:0;
 }
-h1 {
-    font-family: inherit;
-    font-weight:normal;
+
+span{
+  font-family: inherit;
+  font-size: 0.9em;
+  font-weight: 500;
+}
+/*@media (max-width: 400px) {*/
+/*  .grid-container {*/
+/*    display: block;*/
+/*  }*/
+/*}*/
+.container {
+  display:grid;
+  overflow:hidden;
+  font-family: inherit;
+  font-weight: 500;
+  width: 1200;
+  color:#fff;
+  height:100%;
+  grid-template-columns: repeat(3,1fr);
+  margin:12px;
+  position: fixed;
+}
+#nav{
+  grid-column:1/2;
+  height:1024;
+  padding:0px 12px 0px 12px;
+  overflow: scroll;
 }
 
-.grid-container {
-  display: grid;
-  font-family: inherit;
-  font-weight: normal;
-  grid-template-columns: auto auto auto;
-  color:#fff;
-  padding: 24px;
+#app{
+  grid-column:2/3;
+  overflow: scroll;
+}
+
+#topic{
+  grid-column:3/3;
+  padding:48px 12px 0px 24px;
 }
 #topicLabol{
     font-family: inherit;
-    font-weight: blod;
+    font-size: 0.9em;
+    font-weight: 500;
     color:#fff;
 }
 
 ul {
   list-style-type: none;
   margin: 0;
-  padding: 0;
-  width: 30%;
+  padding: 12px 0px 0px 0px;
   background-color: #000;
-  position: fixed;
+  /*position: absolute;*/
   height: 100%;
-  overflow: auto;
+  overflow: scroll;
   font-family: inherit;
-  font-weight: normal;
+  font-weight: 500;
+  font-size: 1em;
 }
 
-li a {
-  display: block;
-  color: #fff;
-  opacity:40%;
-  padding: 8px 16px;
-  text-decoration: none;
+h3 {
+  font-family: inherit;
+  font-size:1.7em;
+  font-weight: 300;
+}
+h4{
+  font-family: inherit;
+  font-size:0.7em;
+  font-weight: 500;
+  line-height: 1.5em;
+  opacity: 0.6;
+}
+.titleStyle, .topicNodes{
+    font-family: inherit;
+    font-size:0.9em;
+    font-weight: 300;
+    opacity: 0.6;
+    line-height: 2.5em;
+}
+.highlightTopic{
+    font-family: inherit;
+    font-size:0.9em;
+    font-weight: 300;
+    line-height: 2.5em;
+    opacity: 1;
+}
+.highLightTitleStyle{
+    font-family: inherit;
+    font-size:0.9em;
+    font-weight: 300;
+    line-height: 2em;
+    opacity: 0.6;
+    /*content: \25C2;*/
+}
+.titleClickStyle{
+  font-family: inherit;
+  font-size: 0.9em;
+  font-weight: 500;
+  line-height: 2em;
+  opacity: 1;
 }
 
-li a.active {
-  color: #fff;
-  opacity: 100%;
+#dynasties{
+  line-height: 2em;
+  font-size: 0.9em;
+  font-weight: 300;
 }
-
-li a:hover:not(.active) {
-  color: #fff;
-  opacity: 70%;
+.topicNodesHighLight{
+  font-family: inherit;
+  font-size: 0.9em;
+  opacity: 1;
 }

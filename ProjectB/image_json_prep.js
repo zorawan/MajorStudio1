@@ -97,11 +97,12 @@ function fetchUrl(searchAllURL){
       var dimension = data.content.freetext.physicalDescription.filter((element) => {
         return element.label == "Dimensions";
       })[0].content;
+      console.log(dimension);
       dimension = dimension.substring(dimension.lastIndexOf(": ")+1,dimension.lastIndexOf(" cm")).split(" x ");
-      //console.log(dimension);
+      console.log(dimension);
 
-      var height = dimension[1];
-      var width = dimension[0];
+      var height = Number(dimension[0]);
+      var width = Number(dimension[1]);
       if ( height > width) {
         
         let filename = data.content.descriptiveNonRepeating.online_media.media[0].content.split('=').pop();
@@ -114,13 +115,14 @@ function fetchUrl(searchAllURL){
         let imgSizeValue = 600;
         
       // var topic = data.content.indexedStructured.topic;
-      // console.log(topic);
+      // console.log(data.content.freetext.name);
         return { 
           objectID: data.id,
           title: data.title,
           //period:data.period,
           topic:data.content.indexedStructured.topic,
           date: data.content.indexedStructured.date[0],
+          // artist: data.content.freetext.name.content.Artist,
           primaryImage: data.content.descriptiveNonRepeating.online_media.media[0].content + `&${imgSizeParam}=${imgSizeValue}`,
           filename: filename.includes(".jpg") ? filename : filename + ".jpg" // if the filename we defined above doesn't include .jpg add it at the end
         };
