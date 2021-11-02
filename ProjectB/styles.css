@@ -64,6 +64,10 @@ ul {
   font-size: 1em;
 }
 
+li, span:hover {
+    cursor: pointer;
+}
+
 h3 {
   font-family: inherit;
   font-size:1.7em;
