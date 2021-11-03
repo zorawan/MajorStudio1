@@ -105,19 +105,20 @@ a.active {
   }
 }
 
-#velva{
-  padding: 30px 20px 0px 36px;
-}
+/*#velva{*/
+/*  position: relative;*/
+/*  align: center;*/
+/*  padding: 30px 20px 20px 20px;*/
+/*}*/
 
-span{
-  text-align:justify;
-  padding: 0px 36px 0px 36px;
-}
+/*span{*/
+/*  text-align:justify;*/
+/*  padding: 0px 36px 0px 36px;*/
+/*}*/
 
 h2{
   font-weight: 400;
   color: #20221C;
-  margin:40px 0px 20px 0px;
 }
 
 h3{
