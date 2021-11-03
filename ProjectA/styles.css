@@ -119,6 +119,8 @@ a.active {
 h2{
   font-weight: 400;
   color: #20221C;
+  text-align: left;
+  padding-left: 36px;
 }
 
 h3{
