@@ -55,7 +55,7 @@ function displayImages(json){
             return './downloads/' + d.filename;
         })
         .on("mouseover", (event, itemData) => {
-            console.log(itemData.title);
+            //console.log(itemData.title);
             var title = document.getElementById("title_" + itemData.title);
             title.scrollIntoView();
             title.setAttribute('class','titleClickStyle');
@@ -167,30 +167,40 @@ function showNav(data) {
         }
     });
 }  
+var whiteList = ["Landscapes", "Animals", "Rivers", "Mountains", "Water", "Flowers", "Men", "Birds", "Pine tree", "Boats and boating", "Winter", "Woman", "Horses", "Trees", "Blue-and-green style", "Fishing", "Pavilion", "Waterfalls", "Water buffalo", "Children", "Baimiao style", "Daoist Immortals", "Plum blossom", "Ducks, Portraits", "Cats", "Lotus", "Snow", "Attendant", "Halo", "Willow tree", "Daoism", "Palace", "Gardens, Qin", "Bamboo", "Peony", "Bridges", "Description and travel", "Camellia", "Goose", "Scholar", "Guanyin", "Temple", "Demon", "Zhong Kui", "Donkey", "Eagles", "Music", "Luohan", "Bodhisattva", "Prayer beads", "Fly whisk", "Sleeping", "Food habits", "Flute", "Playing", "Autumn", "Rocks", "Dragon","Bananas", "Kundika", "Pheasant", "Hibiscus", "Shakyamuni", "Monkeys", "Horsemen and horsewomen", "Poets", "Hollyhock", "Toads","Rites and ceremonies", "Goat", "Chrysanthemum", "Fruit", "Manjushri", "Insects", "Elephants", "Hawk", "Kings and rulers", "Farms", "Cloud", "Musical instruments", "Dance", "Hunting", "Cabbage", "Garden rock", "Umbrellas", "Egrets", "Orchids", "Cormorant", "Phoenix", "Crane", "New year", "Lakes", "Pine", "Herb gathering", "Willow", "Khakkhara", "Tiger", "Ruyi", "Narcissus", "Spring", "Plum tree", "Plants", "Sheng", "Rain", "Ocean", "Villages", "Islands", "Dogs", "Miracle", "Washing", "Mahayana Buddhism", "Wars", "Vitarka mudra", "Parrot","Teaching", "Meditation", "Groom" ];
 
-var whiteList = ["Landscapes", "Animals", "Rivers", "Mountains", "Water", "Flowers", "Men", "Birds", "Pine tree", "Boats and boating", "Winter", "Woman", "Horses", "Trees", "Blue-and-green style", "Fishing", "Pavilion", "Waterfalls", "Water buffalo", "Children, Baimiao style", "Daoist Immortals", "Plum blossom", "Ducks, Portraits", "Cats", "Lotus", "Snow", "Attendant", "Halo", "Willow tree", "Daoism", "Palace", "Gardens, Qin", "Bamboo", "Peony", "Bridges", "Description and travel", "Camellia", "Goose", "Scholar", "Guanyin", "Temple", "Demon", "Zhong Kui", "Donkey", "Eagles", "Music", "Luohan", "Bodhisattva", "Prayer beads", "Fly whisk", "Sleeping", "Food habits", "Flute", "Playing", "Autumn", "Rocks", "Dragon", "Bananas", "Kundika", "Pheasant", "Hibiscus", "Shakyamuni", "Monkeys", "Horsemen and horsewomen", "Poets", "Hollyhock", "Toads","Rites and ceremonies", "Goat", "Chrysanthemum", "Fruit", "Manjushri", "Insects", "Elephants", "Hawk", "Kings and rulers", "Farms", "Cloud", "Musical instruments", "Dance", "Hunting", "Cabbage", "Garden rock", "Umbrellas", "Egrets", "Orchids", "Cormorant", "Phoenix", "Crane", "New year", "Lakes", "Pine", "Herb gathering", "Willow", "Khakkhara", "Tiger", "Ruyi", "Narcissus", "Spring", "Plum tree", "Plants", "Sheng", "Rain", "Ocean", "Villages", "Islands", "Dogs", "Miracle", "Washing", "Mahayana Buddhism", "Wars", "Vitarka mudra", "Parrot"];
-// var whiteList2 = [ "Teaching", "Meditation", "Groom", "Prayer", "Abhiseka mudra", "Minister", "Persimmon", "Sutra", "Tortoise", "Worship", "Stupa", "Biwa", "Pipa", "Reading", "Bird and flower", "Quail", "Sewing", "Jiehua", "Zen Buddhism", "Bodhidharma", "Mudra", "Summer", "Dove", "Wind", "Inn", "Lovers", "Writing", "Poetry", "Marriage", "Family", "Daylily", "Lute", "Tea", "Liu Hai", "Festivals", "Wave", "Seascape", "Game playing", "Musicians", "Wood-gathering", "Fans", "Roses", "Shrine", "Fishes", "Kalasa", "Frogs", "Fungus-of-immortality", "Peach", "Queen Mother of the West", "Herding", "Gourd", "Magic", "Spirit, Pig", "Chicken", "Eight Views of Xiao-Xiang", "Confucius", "Laozi", "Butterflies", "Moon", "Outer space", "Grape", "Inscriptions", "Sunrise", "Shepherd", "Beetles", "Herons", "Swallow", "Talisman", "Lu Dongbin", "King", "Vimalakirti", "Business", "Incense", "Vajra", "Monk", "Mount Emei", "Snakes", "Mythological subject", "Mandorla", "Throne", "Ba Xian", "Pagoda", "Puppets", "Mynah bird", "Dreaming", "Dhayanibuddha", "Drums", "Cymbal", "Chang'e", "Rabbits", "Magpie", "Mouse", "Melon", "Archery", "Bow", "Bees"];
+var whiteList1 = ["Landscapes", "Animals", "Rivers", "Mountains", "Water", "Flowers", "Men", "Birds", "Pine tree", "Boats and boating", "Winter", "Woman", "Horses", "Trees", "Blue-and-green style", "Fishing", "Pavilion", "Waterfalls", "Water buffalo", "Children"];
+var whiteList2 = ["Baimiao style", "Daoist Immortals", "Plum blossom", "Ducks, Portraits", "Cats", "Lotus", "Snow", "Attendant", "Halo", "Willow tree", "Daoism", "Palace", "Gardens, Qin", "Bamboo", "Peony", "Bridges", "Description and travel", "Camellia", "Goose"];
+var whiteList3 = ["Scholar", "Guanyin", "Temple", "Demon", "Zhong Kui", "Donkey", "Eagles", "Music", "Luohan", "Bodhisattva", "Prayer beads", "Fly whisk", "Sleeping", "Food habits", "Flute", "Playing", "Autumn", "Rocks", "Dragon"];
+var whiteList4 = ["Bananas", "Kundika", "Pheasant", "Hibiscus", "Shakyamuni", "Monkeys", "Horsemen and horsewomen", "Poets", "Hollyhock", "Toads","Rites and ceremonies", "Goat", "Chrysanthemum", "Fruit", "Manjushri", "Insects", "Elephants", "Hawk", "Kings and rulers", "Farms"];
+var whiteList5 = ["Cloud", "Musical instruments", "Dance", "Hunting", "Cabbage", "Garden rock", "Umbrellas", "Egrets", "Orchids", "Cormorant", "Phoenix", "Crane", "New year", "Lakes", "Pine", "Herb gathering", "Willow", "Khakkhara", "Tiger"];
+var whiteList6 = ["Ruyi", "Narcissus", "Spring", "Plum tree", "Plants", "Sheng", "Rain", "Ocean", "Villages", "Islands", "Dogs", "Miracle", "Washing", "Mahayana Buddhism", "Wars", "Vitarka mudra", "Parrot","Teaching", "Meditation", "Groom"];
+
+// var whiteList7 = ["Prayer", "Abhiseka mudra", "Minister", "Persimmon", "Sutra", "Tortoise", "Worship", "Stupa", "Biwa", "Pipa", "Reading", "Bird and flower", "Quail", "Sewing", "Jiehua", "Zen Buddhism", "Bodhidharma", "Mudra", "Summer", "Dove", "Wind", "Inn", "Lovers", "Writing", "Poetry", "Marriage", "Family", "Daylily", "Lute", "Tea", "Liu Hai", "Festivals", "Wave", "Seascape", "Game playing", "Musicians", "Wood-gathering", "Fans", "Roses", "Shrine", "Fishes", "Kalasa", "Frogs", "Fungus-of-immortality", "Peach", "Queen Mother of the West", "Herding", "Gourd", "Magic", "Spirit, Pig", "Chicken", "Eight Views of Xiao-Xiang", "Confucius", "Laozi", "Butterflies", "Moon", "Outer space", "Grape", "Inscriptions", "Sunrise", "Shepherd", "Beetles", "Herons", "Swallow", "Talisman", "Lu Dongbin", "King", "Vimalakirti", "Business", "Incense", "Vajra", "Monk", "Mount Emei", "Snakes", "Mythological subject", "Mandorla", "Throne", "Ba Xian", "Pagoda", "Puppets", "Mynah bird", "Dreaming", "Dhayanibuddha", "Drums", "Cymbal", "Chang'e", "Rabbits", "Magpie", "Mouse", "Melon", "Archery", "Bow", "Bees"];
+
 function wordFreq(data) {
     var freqMap = new Map();
     data.forEach(function(item) {
         item.topic.forEach(function(w) {
-            console.log(w);
+            //console.log(w);
            if (whiteList.includes(w)){
                 if (!freqMap.get(w)) {
                     freqMap.set(w, 0);
                 }
                 freqMap.set(w, freqMap.get(w)+1);
                 console.log(freqMap);
-            }
+           }
         });
     });
 
     return  [...freqMap.entries()].sort((a, b) => b[1] - a[1]);
 }
 
+
+
 function showTopic(topics) {
     var topicNode= document.getElementById("topics");
-    console.log(topics);
+    //console.log(topics);
     topics.map(topic=>{
         var nodeChild = document.createElement("span");
         nodeChild.innerHTML = topic[0] + ", ";
@@ -199,10 +209,14 @@ function showTopic(topics) {
         topicNode.appendChild(nodeChild);
         topicArray.push(nodeChild);
         
-
+        // if (topics.includes(whiteList1)){
+        //     var topicGroup = document.createElement("div");
+        //     topicGroup.innerHTML = "1 - 20";
+        //     topicGroup.set.Attribute('class', 'topicGroup');
+        //}
         
         nodeChild.addEventListener("click", function() {
-            console.log(topic);
+            //console.log(topic);
             
             topicArray.map(item => {
                 if (item == nodeChild) {
