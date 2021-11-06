@@ -167,16 +167,9 @@ function showNav(data) {
         }
     });
 }  
-var whiteList = ["Landscapes", "Animals", "Rivers", "Mountains", "Water", "Flowers", "Men", "Birds", "Pine tree", "Boats and boating", "Winter", "Woman", "Horses", "Trees", "Blue-and-green style", "Fishing", "Pavilion", "Waterfalls", "Water buffalo", "Children", "Baimiao style", "Daoist Immortals", "Plum blossom", "Ducks, Portraits", "Cats", "Lotus", "Snow", "Attendant", "Halo", "Willow tree", "Daoism", "Palace", "Gardens, Qin", "Bamboo", "Peony", "Bridges", "Description and travel", "Camellia", "Goose", "Scholar", "Guanyin", "Temple", "Demon", "Zhong Kui", "Donkey", "Eagles", "Music", "Luohan", "Bodhisattva", "Prayer beads", "Fly whisk", "Sleeping", "Food habits", "Flute", "Playing", "Autumn", "Rocks", "Dragon","Bananas", "Kundika", "Pheasant", "Hibiscus", "Shakyamuni", "Monkeys", "Horsemen and horsewomen", "Poets", "Hollyhock", "Toads","Rites and ceremonies", "Goat", "Chrysanthemum", "Fruit", "Manjushri", "Insects", "Elephants", "Hawk", "Kings and rulers", "Farms", "Cloud", "Musical instruments", "Dance", "Hunting", "Cabbage", "Garden rock", "Umbrellas", "Egrets", "Orchids", "Cormorant", "Phoenix", "Crane", "New year", "Lakes", "Pine", "Herb gathering", "Willow", "Khakkhara", "Tiger", "Ruyi", "Narcissus", "Spring", "Plum tree", "Plants", "Sheng", "Rain", "Ocean", "Villages", "Islands", "Dogs", "Miracle", "Washing", "Mahayana Buddhism", "Wars", "Vitarka mudra", "Parrot","Teaching", "Meditation", "Groom" ];
+var whiteList = ["Landscapes", "Animals", "Rivers", "Mountains", "Water", "Flowers", "Men", "Birds", "Pine tree", "Boats and boating", "Winter", "Woman", "Horses", "Trees", "Blue-and-green style", "Fishing", "Pavilion", "Waterfalls", "Water buffalo", "Children", "Baimiao style", "Daoist Immortals", "Plum blossom", "Ducks, Portraits", "Cats", "Lotus", "Snow", "Attendant", "Halo", "Willow tree", "Daoism", "Palace", "Gardens, Qin", "Bamboo", "Peony", "Bridges", "Description and travel", "Camellia", "Goose", "Scholar", "Guanyin", "Temple", "Demon", "Zhong Kui", "Donkey", "Eagles", "Music", "Luohan", "Bodhisattva", "Prayer beads", "Fly whisk", "Sleeping", "Food habits", "Flute", "Playing", "Autumn", "Rocks", "Dragon","Bananas", "Kundika", "Pheasant", "Hibiscus", "Shakyamuni", "Monkeys", "Horsemen and horsewomen", "Poets", "Hollyhock", "Toads","Rites and ceremonies", "Goat", "Chrysanthemum", "Fruit", "Manjushri", "Insects", "Elephants", "Hawk", "Kings and rulers", "Farms", "Cloud", "Musical instruments", "Dance", "Hunting", "Cabbage", "Garden rock", "Umbrellas", "Egrets", "Orchids", "Cormorant", "Phoenix", "Crane", "New year", "Lakes", "Pine", "Herb gathering", "Willow", "Khakkhara", "Tiger", "Ruyi", "Narcissus", "Spring", "Plum tree", "Plants", "Sheng", "Rain", "Ocean", "Villages", "Islands", "Dogs", "Miracle", "Washing", "Mahayana Buddhism", "Wars", "Vitarka mudra", "Parrot","Teaching", "Meditation", "Groom", "Prayer", "Abhiseka mudra", "Minister", "Persimmon", "Sutra", "Tortoise", "Worship", "Stupa", "Biwa", "Pipa", "Reading", "Bird and flower", "Quail", "Sewing", "Jiehua", "Zen Buddhism", "Bodhidharma", "Mudra", "Summer", "Dove", "Wind", "Inn", "Lovers", "Writing", "Poetry", "Marriage", "Family", "Daylily", "Lute", "Tea", "Liu Hai", "Festivals", "Wave", "Seascape", "Game playing", "Musicians", "Wood-gathering", "Fans", "Roses", "Shrine", "Fishes", "Kalasa", "Frogs", "Fungus-of-immortality", "Peach", "Queen Mother of the West", "Herding", "Gourd", "Magic", "Spirit, Pig", "Chicken", "Eight Views of Xiao-Xiang", "Confucius", "Laozi", "Butterflies", "Moon", "Outer space", "Grape", "Inscriptions", "Sunrise", "Shepherd", "Beetles", "Herons", "Swallow", "Talisman", "Lu Dongbin", "King", "Vimalakirti", "Business", "Incense", "Vajra", "Monk", "Mount Emei", "Snakes", "Mythological subject", "Mandorla", "Throne", "Ba Xian", "Pagoda", "Puppets", "Mynah bird", "Dreaming", "Dhayanibuddha", "Drums", "Cymbal", "Chang'e", "Rabbits", "Magpie", "Mouse", "Melon", "Archery", "Bow", "Bees" ];
 
-var whiteList1 = ["Landscapes", "Animals", "Rivers", "Mountains", "Water", "Flowers", "Men", "Birds", "Pine tree", "Boats and boating", "Winter", "Woman", "Horses", "Trees", "Blue-and-green style", "Fishing", "Pavilion", "Waterfalls", "Water buffalo", "Children"];
-var whiteList2 = ["Baimiao style", "Daoist Immortals", "Plum blossom", "Ducks, Portraits", "Cats", "Lotus", "Snow", "Attendant", "Halo", "Willow tree", "Daoism", "Palace", "Gardens, Qin", "Bamboo", "Peony", "Bridges", "Description and travel", "Camellia", "Goose"];
-var whiteList3 = ["Scholar", "Guanyin", "Temple", "Demon", "Zhong Kui", "Donkey", "Eagles", "Music", "Luohan", "Bodhisattva", "Prayer beads", "Fly whisk", "Sleeping", "Food habits", "Flute", "Playing", "Autumn", "Rocks", "Dragon"];
-var whiteList4 = ["Bananas", "Kundika", "Pheasant", "Hibiscus", "Shakyamuni", "Monkeys", "Horsemen and horsewomen", "Poets", "Hollyhock", "Toads","Rites and ceremonies", "Goat", "Chrysanthemum", "Fruit", "Manjushri", "Insects", "Elephants", "Hawk", "Kings and rulers", "Farms"];
-var whiteList5 = ["Cloud", "Musical instruments", "Dance", "Hunting", "Cabbage", "Garden rock", "Umbrellas", "Egrets", "Orchids", "Cormorant", "Phoenix", "Crane", "New year", "Lakes", "Pine", "Herb gathering", "Willow", "Khakkhara", "Tiger"];
-var whiteList6 = ["Ruyi", "Narcissus", "Spring", "Plum tree", "Plants", "Sheng", "Rain", "Ocean", "Villages", "Islands", "Dogs", "Miracle", "Washing", "Mahayana Buddhism", "Wars", "Vitarka mudra", "Parrot","Teaching", "Meditation", "Groom"];
-
-// var whiteList7 = ["Prayer", "Abhiseka mudra", "Minister", "Persimmon", "Sutra", "Tortoise", "Worship", "Stupa", "Biwa", "Pipa", "Reading", "Bird and flower", "Quail", "Sewing", "Jiehua", "Zen Buddhism", "Bodhidharma", "Mudra", "Summer", "Dove", "Wind", "Inn", "Lovers", "Writing", "Poetry", "Marriage", "Family", "Daylily", "Lute", "Tea", "Liu Hai", "Festivals", "Wave", "Seascape", "Game playing", "Musicians", "Wood-gathering", "Fans", "Roses", "Shrine", "Fishes", "Kalasa", "Frogs", "Fungus-of-immortality", "Peach", "Queen Mother of the West", "Herding", "Gourd", "Magic", "Spirit, Pig", "Chicken", "Eight Views of Xiao-Xiang", "Confucius", "Laozi", "Butterflies", "Moon", "Outer space", "Grape", "Inscriptions", "Sunrise", "Shepherd", "Beetles", "Herons", "Swallow", "Talisman", "Lu Dongbin", "King", "Vimalakirti", "Business", "Incense", "Vajra", "Monk", "Mount Emei", "Snakes", "Mythological subject", "Mandorla", "Throne", "Ba Xian", "Pagoda", "Puppets", "Mynah bird", "Dreaming", "Dhayanibuddha", "Drums", "Cymbal", "Chang'e", "Rabbits", "Magpie", "Mouse", "Melon", "Archery", "Bow", "Bees"];
+// var whiteList2 = ["Prayer", "Abhiseka mudra", "Minister", "Persimmon", "Sutra", "Tortoise", "Worship", "Stupa", "Biwa", "Pipa", "Reading", "Bird and flower", "Quail", "Sewing", "Jiehua", "Zen Buddhism", "Bodhidharma", "Mudra", "Summer", "Dove", "Wind", "Inn", "Lovers", "Writing", "Poetry", "Marriage", "Family", "Daylily", "Lute", "Tea", "Liu Hai", "Festivals", "Wave", "Seascape", "Game playing", "Musicians", "Wood-gathering", "Fans", "Roses", "Shrine", "Fishes", "Kalasa", "Frogs", "Fungus-of-immortality", "Peach", "Queen Mother of the West", "Herding", "Gourd", "Magic", "Spirit, Pig", "Chicken", "Eight Views of Xiao-Xiang", "Confucius", "Laozi", "Butterflies", "Moon", "Outer space", "Grape", "Inscriptions", "Sunrise", "Shepherd", "Beetles", "Herons", "Swallow", "Talisman", "Lu Dongbin", "King", "Vimalakirti", "Business", "Incense", "Vajra", "Monk", "Mount Emei", "Snakes", "Mythological subject", "Mandorla", "Throne", "Ba Xian", "Pagoda", "Puppets", "Mynah bird", "Dreaming", "Dhayanibuddha", "Drums", "Cymbal", "Chang'e", "Rabbits", "Magpie", "Mouse", "Melon", "Archery", "Bow", "Bees"];
 
 function wordFreq(data) {
     var freqMap = new Map();
@@ -199,21 +192,28 @@ function wordFreq(data) {
 
 
 function showTopic(topics) {
-    var topicNode= document.getElementById("topics");
+    var topicNode20= document.getElementById("topics20");
+    var topicNode10= document.getElementById("topics10");
+    var topicNode5= document.getElementById("topics5");
+    var topicNode1= document.getElementById("topics1");
     //console.log(topics);
+    
     topics.map(topic=>{
         var nodeChild = document.createElement("span");
         nodeChild.innerHTML = topic[0] + ", ";
         nodeChild.setAttribute('class', 'topicNodes');
         nodeChild.id = topic[0];
-        topicNode.appendChild(nodeChild);
+        if (topic[1] >=20) {
+            topicNode20.appendChild(nodeChild);
+        } else if(topic[1]>=10) {
+            topicNode10.appendChild(nodeChild);
+        } else if(topic[1]>=5) {
+            topicNode5.appendChild(nodeChild);
+        } else if(topic[1]==1) {
+            topicNode1.appendChild(nodeChild);
+        } 
         topicArray.push(nodeChild);
         
-        // if (topics.includes(whiteList1)){
-        //     var topicGroup = document.createElement("div");
-        //     topicGroup.innerHTML = "1 - 20";
-        //     topicGroup.set.Attribute('class', 'topicGroup');
-        //}
         
         nodeChild.addEventListener("click", function() {
             //console.log(topic);
