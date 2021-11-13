@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500&family=Noto+Sans+TC:wght@300;400;500&family=Noto+Sans:wght@400;700&family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body{
+    background-color: #000;
+    font-family: 'Spartan', 'Noto Sans','Noto Sans SC','Noto Sans TC',sans-serif;
+}
+
+span{
+  font-family: inherit;
+  font-size: 0.9em;
+  font-weight: 500;
+}
+
+@media screen and (orientation:landscape)
+and (min-device-width: 240) 
+and (max-device-width: 480) {
+  .container {
+  display:grid;
+  overflow:hidden;
+  font-family: inherit;
+  font-weight: 500;
+  width: 1200;
+  color:#fff;
+  height:100%;
+  /*grid-template-columns: repeat(3,1fr);*/
+  margin:24px;
+  position: fixed;
+}
+}
+
+@media screen and (max-width: 600px) {
+  #dynasties  li:not(:first-child){display: none;}
+  #dynasties li.icon {
+    float: left;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #dynasties.responsive {position: relative;}
+  #dynasties.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  #dynasties.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}  
+
+#nav{
+  grid-column:1/2;
+  /*height:1024;*/
+  padding:0px 20px 12px 24px;
+  overflow: scroll;
+  margin-bottom: 100px;
+}
+
+#app{
+  grid-column:2/3;
+  overflow: scroll;
+  width:100%;
+  max-width:100%;
+  height:auto;
+}
+
+#topic{
+  grid-column:3/3;
+  padding:0px 12px 46px 24px;
+  overflow: scroll;
+  margin-bottom: 100px;
+}
+#topicLabol{
+    font-family: inherit;
+    font-size: 0.9em;
+    font-weight: 500;
+    color:#fff;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 12px 0px 0px 0px;
+  background-color: #000;
+  /*position: absolute;*/
+  height: 100%;
+  overflow: scroll;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 1em;
+}
+li{
+  line-height: 3em;
+}
+li, span:hover {
+    cursor: pointer;
+    line-height: 3em;
+}
+
+.titleStyle{
+    font-family: inherit;
+    font-size:0.9em;
+    font-weight: 300;
+    opacity: 0.6;
+    line-height: 2em;
+    padding-bottom: 24px;
+}
+
+.topicNodes{
+    font-family: inherit;
+    font-size:0.9em;
+    font-weight: 300;
+    opacity: 0.6;
+    line-height: 3em;
+    padding-bottom: 24px;
+}
+
+.highlightTopic{
+    font-family: inherit;
+    font-size:0.9em;
+    font-weight: 300;
+    opacity: 1;
+}
+.highLightTitleStyle{
+    font-family: inherit;
+    font-size:0.9em;
+    font-weight: 300;
+    line-height: 2em;
+    opacity: 0.6;
+    padding-bottom: 24px;
+}
+.titleClickStyle{
+  font-family: inherit;
+  font-size: 0.9em;
+  font-weight: 500;
+  line-height: 2em;
+  opacity: 1;
+  padding-bottom: 24px;
+}
+
+#dynasties{
+  line-height: 2em;
+  font-size: 0.9em;
+  font-weight: 300;
+}
+.topicNodesHighLight{
+  font-family: inherit;
+  font-size: 0.9em;
+  opacity: 1;
+}
+header{
+  position: static;
+  width:100%;
+}
+h3{
+  font-family: inherit;
+  color:#fff;
+  padding-left: 24px;
+  line-height: 0.6em;
+  font-size: 1.6em;
+  font-weight: 300;
+
+}
+h4{
+  font-family: inherit;
+  color:#fff;
+  padding-left: 24px;
+  line-height: 2em;
+  font-size: 0.6em;
+  font-weight: 500;
+
+}
+ .tier{
+   font-family: inherit;
+   line-height: 3em;
+   font-size: 0.9em;
+   font-weight: 300;
+ }
