@@ -1,5 +1,4 @@
 /* global d3 */
-/* global $ */
 // "d3" is globally available
 // because we have the d3 code
 // in our index.html file
@@ -61,33 +60,11 @@ function displayImages(json){
             title.setAttribute('class','titleClickStyle');
             
             
-            
-            //TODO
-            // var topicNodes = document.getElementsByClassName("topicNodes")
-            // topicNodes.map(topic => {
-            //     if (itemData.topic.includes(topic.innerHTML.substring(0, topic.innerHTML.length -2))) {
-            //         topic.setAttribute("class", "highlightTopic");
-            //     } else {
-            //          topic.setAttribute("class", "topicNodes");
-            //     }
-            // });
-            
         });
  
-    // create a paragraph that will
-    // hold the object date
-    // card.append('p')
-    //     .attr('class', 'object-date')
-    //     .text(d=>d.date);
-
-    // // create a heading tag
-    // // that will be the object title
-    // card.append('h2')
-    //     .attr('class', 'title')
-    //     .text(d=>d.title);
     
     showNav(data);
-    showTopic(wordFreq(data))
+    showTopic(wordFreq(data));
 }
 
 function showNav(data) {
@@ -148,10 +125,7 @@ function showNav(data) {
                 //
             });
             
-        
-            // li.addEventListener("mouseleave", function(e){
-            //     li.setAttribute('class','titleStyle');
-            // });
+
         if (item.date <= 906){
             tang.appendChild(li);
         } else if (item.date <= 1127){

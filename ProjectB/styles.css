@@ -10,12 +10,8 @@ span{
   font-size: 0.9em;
   font-weight: 500;
 }
-/*@media (max-width: 400px) {*/
-/*  .grid-container {*/
-/*    display: block;*/
-/*  }*/
-/*}*/
-.container {
+
+  .container {
   display:grid;
   overflow:hidden;
   font-family: inherit;
@@ -27,6 +23,7 @@ span{
   margin:12px;
   position: fixed;
 }
+
 #nav{
   grid-column:1/2;
   /*height:1024;*/
@@ -38,6 +35,9 @@ span{
 #app{
   grid-column:2/3;
   overflow: scroll;
+  width:100%;
+  max-width:100%;
+  height:auto;
 }
 
 #topic{

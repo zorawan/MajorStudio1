@@ -20,7 +20,7 @@ const dotenv = require('dotenv');
 // getting our api key from .env
 dotenv.config();
 const API_KEY = process.env.API_KEY;
-console.log(API_KEY);
+//console.log(API_KEY);
 // endpoint URL
 const searchBaseURL = "https://api.si.edu/openaccess/api/v1.0/search";
 // our search term
@@ -103,7 +103,7 @@ function fetchUrl(searchAllURL){
 
       var height = Number(dimension[0]);
       var width = Number(dimension[1]);
-      if ( height > width) {
+      if ( height < width) {
         
         let filename = data.content.descriptiveNonRepeating.online_media.media[0].content.split('=').pop();
         
