@@ -103,7 +103,7 @@ function fetchUrl(searchAllURL){
 
       var height = Number(dimension[0]);
       var width = Number(dimension[1]);
-      if ( height > width) {
+      if ( height < width) {
         
         let filename = data.content.descriptiveNonRepeating.online_media.media[0].content.split('=').pop();
         
