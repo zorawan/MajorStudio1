@@ -14,7 +14,7 @@ function downloadImage(uri, filename, callback){
     // console.log('content-length:', res.headers['content-length']);
     request(uri).pipe(fs.createWriteStream(folder + "/" + filename)).on('close', callback);
   });
-};
+}
 
 // go through the json we created before
 function downloadData() {
