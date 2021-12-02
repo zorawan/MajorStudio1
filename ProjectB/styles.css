@@ -29,7 +29,7 @@ span{
   /*height:1024;*/
   padding:0px 20px 12px 24px;
   overflow: scroll;
-  margin-bottom: 100px;
+  margin-bottom: 24px;
 }
 
 #app{
@@ -42,13 +42,13 @@ span{
 
 #topic{
   grid-column:3/3;
-  padding:0px 12px 46px 24px;
+  padding: 72px 12px 0px 24px;
   overflow: scroll;
-  margin-bottom: 100px;
+  margin-bottom: 24px;
 }
 #topicLabol{
     font-family: inherit;
-    font-size: 0.9em;
+    font-size: 1em;
     font-weight: 500;
     color:#fff;
 }
@@ -151,4 +151,7 @@ h4{
    line-height: 3em;
    font-size: 0.9em;
    font-weight: 300;
+ }
+ .tri{
+   padding:24px;
  }
