@@ -3,9 +3,10 @@
 body{
     background-color: #000;
     font-family: 'Spartan', 'Noto Sans','Noto Sans SC','Noto Sans TC',sans-serif;
+}
+#info1{
     padding:36px;
 }
-
 h1{
     font-family: inherit;
     font-size: 2.4em;
@@ -13,11 +14,17 @@ h1{
     font-weight: 600;
     color:#fff;
 }
-.tri{
-  position: absolute;
-  align-content:center;
-  padding:24px;
+#next{
+  position: relative;
+  margin:12px 0px 0px 36px;
   bottom:24px;
+}
+a{
+  font-family: inherit;
+  font-size: 0.8em;
+  color:#fff;
+  opacity: 0.6;
+  text-decoration: none;
 }
 
 h3{
@@ -34,4 +41,9 @@ h4{
     font-weight: 300;
     color:#fff;
     opacity: 0.6;
+}
+img{
+    height:300px;
+    width:100%;
+    object-fit: cover;
 }
