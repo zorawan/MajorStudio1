@@ -1,7 +1,4 @@
 /* global d3 */
-// "d3" is globally available
-// because we have the d3 code
-// in our index.html file
 
 var data = [];
 var topicArray = [];

@@ -15,9 +15,11 @@ h1{
     color:#fff;
 }
 #next{
-  position: relative;
+  position: absolute;
   margin:12px 0px 0px 36px;
-  bottom:24px;
+  height:36px;
+  width:100%;
+  cursor: pointer;
 }
 span{
   font-family: inherit;
@@ -49,6 +51,14 @@ img{
     object-fit: cover;
 }
 body { 
-   opacity: 0;
-   transition: opacity .3s;
+    opacity: 0;
+    transition: opacity .3s;
+}
+h2{
+    font-family: inherit;
+    font-size: 1.3em;
+    line-height: 1.6em;
+    font-weight: 500;
+    color:#fff;
+    padding-top:2em;
 }
