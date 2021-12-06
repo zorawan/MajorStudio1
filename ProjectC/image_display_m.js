@@ -36,12 +36,18 @@ function displayImages(data, root, startDate, endDate){
     // select a <div> with an id of "app"
     // this is where we want all of our
     // images to be added
+    let total = data.length;
     let app = d3.select(root).text('');
-
+     for(var i=0; i<data.length; i++) {
+        var item = data[i];
+        item.index = i;
+    }
     var data = data.filter(item =>{
         return item.date >= startDate && item.date <= endDate;
     });
 
+   
+    
     let card = app.selectAll('div.smithsonian-card')
                 .data(data)
                 .join('div')
@@ -61,13 +67,42 @@ function displayImages(data, root, startDate, endDate){
         })
        .on("mouseover", (event, itemData) => {
             //console.log(itemData.title);
-            console.log("mouse over");
             var title = document.getElementById("title");
             title.innerHTML=itemData.title;
             //title.style = 
             currentImage = itemData;
-           var detail = document.getElementById("overlay");
-           detail.innerHTML = "<p id='date'>Date</p>"+ itemData.date + "<p id='topics'>Topics</p>" + itemData.topic;
+            var detail = document.getElementById("overlay");
+            detail.innerHTML = "<p id='date'>Date</p>"+ itemData.date + "<p id='topics'>Topics</p>" + itemData.topic.filter(word => word != "Art" && word != "Chinese Art");
+            
+           
+            var svgL = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+            var rectL = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+            svgL.setAttribute("aria-hidden","true");
+            svgL.setAttribute('viewbox', '0 0 2 500');
+            svgL.setAttribute("class","line");
+            svgL.setAttribute('fill','none');
+            rectL.setAttribute('fill','#fff');
+            rectL.setAttribute('width', '2px');
+            rectL.setAttribute('height', '500px');
+            rectL.setAttribute('fill-opacity','0.5');
+            svgL.appendChild(rectL);
+            detail.appendChild(svgL);
+            
+            var svgD = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+            var pathD = document.createElementNS("http://www.w3.org/2000/svg", "path");
+            svgD.setAttribute("aria-hidden","true");
+            svgD.setAttribute('viewbox', '0 0 14 22');
+            svgD.setAttribute("class","dot");
+            svgD.setAttribute('fill','none');
+            svgD.style.top = (80 + itemData.index / total * 500) + 'px';
+            pathD.setAttribute('fill','#fff');
+            pathD.setAttribute('width', '14px');
+            pathD.setAttribute('height', '22px');
+            pathD.setAttribute('d', 'M14 11L0.500001 21.3923L0.500002 0.607695L14 11Z');
+            // svgD.setAttribute('top', document.element.scrollHeight);
+            svgD.appendChild(pathD);
+            detail.appendChild(svgD);
+           
        })
        .on("click", (event, itemData) => {
             //console.log(itemData.title);
@@ -75,8 +110,8 @@ function displayImages(data, root, startDate, endDate){
             title.style.visibility = title.style.visibility == "visible" ? `hidden` : "visible";
             var detailContainer = document.getElementById("detail-container");
             detailContainer.style.visibility = detailContainer.style.visibility == "visible" ? `hidden` : "visible";
+
        });
-       
 
 }
 
@@ -100,37 +135,4 @@ function onNavClick() {
   return true;
 }
 
-// var timer = null;
-// window.addEventListener('scroll', function() {
-//     if(timer !== null) {
-//         clearTimeout(timer);        
-//     }
-//     timer = setTimeout(function() {
-//           // do something
-//           console.log("scroll end");
-//     }, 150);
-// }, false);
 
-
-// function showDetails(){  
-//     var detail = document.getElementById("overlay");
-//     detail.addEventListener("click", (event) => {
-//         console.log("click detail: " + currentImaage.topic);
-//         document.getElementById("topic").innerHTML = currentImaage.topic;
-//         document.getElementById("date").innerHTML = currentImaage.date;
-//     });
-// }
-
-// function on() {
-//   document.getElementById("overlay").style.display = "block";
-// }
-
-// function off() {
-//   document.getElementById("overlay").style.display = "none";
-// }
-
-// var tag = document.createElement("div");
-//   var text = document.createTextNode("Southern Song");
-//   tag.appendChild(text);
-//   var element = document.getElementById("img_Two Fighting Water Buffaloes");
-//   element.appendChild(tag);
