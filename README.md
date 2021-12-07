@@ -3,12 +3,15 @@
 
 #### [Women of the US National Herbarium](https://zorawan.github.io/MajorStudio1/ProjectA/index.html) 
 The journey of plants collection
+
 ---
 
 #### [Scrolling Scrolls](https://zorawan.github.io/MajorStudio1/ProjectB/index.html)
 Chinese Paintings in a timeline
+
 ---
 
 #### [Scrolling Scrolls on Mobile](https://zorawan.github.io/MajorStudio1/ProjectC/index_m.html)
 Interactive Chinese Scrolls on mobile
+
 ---
