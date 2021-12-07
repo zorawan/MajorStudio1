@@ -91,17 +91,21 @@ function displayImages(data, root, startDate, endDate){
             var svgD = document.createElementNS("http://www.w3.org/2000/svg", "svg");
             var pathD = document.createElementNS("http://www.w3.org/2000/svg", "path");
             svgD.setAttribute("aria-hidden","true");
-            svgD.setAttribute('viewbox', '0 0 14 22');
+            svgD.setAttribute('viewbox', '0 0 30 37');
             svgD.setAttribute("class","dot");
             svgD.setAttribute('fill','none');
             svgD.style.top = (80 + itemData.index / total * 500) + 'px';
             pathD.setAttribute('fill','#fff');
-            pathD.setAttribute('width', '14px');
-            pathD.setAttribute('height', '22px');
-            pathD.setAttribute('d', 'M14 11L0.500001 21.3923L0.500002 0.607695L14 11Z');
+            pathD.setAttribute('fill-rule','evenodd');
+            pathD.setAttribute('clip-rule','evenodd');
+            pathD.setAttribute('d', 'M30 0H0V37H30V0ZM5 4H3V20H5V4ZM27 4H25V16H27V4ZM14.25 26L18 21L21 25V4H23V27.6667L27 33H5L11 25C11 25 13.81 28.75 15.5 31L17.1 29.8L14.25 26ZM19 4H17V16H19V4ZM15 4H13V10H15V4Z');
+        
             // svgD.setAttribute('top', document.element.scrollHeight);
             svgD.appendChild(pathD);
             detail.appendChild(svgD);
+            // var icThumb = document.getElementById("ic_thumb");
+            // icThumb.style.top = (80 + itemData.index / total * 500) + 'px';
+            // detail.appendChild(icThumb);
            
        })
        .on("click", (event, itemData) => {
@@ -134,5 +138,3 @@ function onNavClick() {
   hideOverlay();
   return true;
 }
-
-
