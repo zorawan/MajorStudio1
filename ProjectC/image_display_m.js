@@ -94,7 +94,7 @@ function displayImages(data, root, startDate, endDate){
             svgD.setAttribute('viewbox', '0 0 30 37');
             svgD.setAttribute("class","dot");
             svgD.setAttribute('fill','none');
-            svgD.style.top = (80 + itemData.index / total * 500) + 'px';
+            svgD.style.top = (80 + itemData.index / total * 466) + 'px';
             pathD.setAttribute('fill','#fff');
             pathD.setAttribute('fill-rule','evenodd');
             pathD.setAttribute('clip-rule','evenodd');
