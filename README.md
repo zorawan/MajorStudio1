@@ -6,7 +6,7 @@ The journey of plants collection
 
 ---
 
-#### [Scrolling Scrolls](https://zorawan.github.io/MajorStudio1/ProjectB/index.html)
+#### [Scrolling Scrolls](https://zorawan.github.io/MajorStudio1/ProjectB/intro.html)
 Chinese Paintings in a timeline
 
 ---
