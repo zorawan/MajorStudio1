@@ -81,27 +81,27 @@ function displayImages(data, root, startDate, endDate){
             var svgL = document.createElementNS("http://www.w3.org/2000/svg", "svg");
             var rectL = document.createElementNS("http://www.w3.org/2000/svg", "rect");
             svgL.setAttribute("aria-hidden","true");
-            svgL.setAttribute('viewbox', '0 0 2 500');
+            svgL.setAttribute('viewbox', '0 0 24 460');
             svgL.setAttribute("class","line");
             svgL.setAttribute('fill','none');
             rectL.setAttribute('fill','#fff');
-            rectL.setAttribute('width', '2px');
-            rectL.setAttribute('height', '500px');
-            rectL.setAttribute('fill-opacity','0.5');
+            rectL.setAttribute('width', '24px');
+            rectL.setAttribute('height', '460px');
+            rectL.setAttribute('fill-opacity','0.2');
             svgL.appendChild(rectL);
             detail.appendChild(svgL);
             
             var svgD = document.createElementNS("http://www.w3.org/2000/svg", "svg");
             var pathD = document.createElementNS("http://www.w3.org/2000/svg", "path");
             svgD.setAttribute("aria-hidden","true");
-            svgD.setAttribute('viewbox', '0 0 30 37');
+            svgD.setAttribute('viewbox', '0 0 24 30');
             svgD.setAttribute("class","dot");
             svgD.setAttribute('fill','none');
-            svgD.style.top = (80 + itemData.index / total * 466) + 'px';
+            svgD.style.top = (80 + itemData.index / total * 430) + 'px';
             pathD.setAttribute('fill','#fff');
             pathD.setAttribute('fill-rule','evenodd');
             pathD.setAttribute('clip-rule','evenodd');
-            pathD.setAttribute('d', 'M30 0H0V37H30V0ZM5 4H3V20H5V4ZM27 4H25V16H27V4ZM14.25 26L18 21L21 25V4H23V27.6667L27 33H5L11 25C11 25 13.81 28.75 15.5 31L17.1 29.8L14.25 26ZM19 4H17V16H19V4ZM15 4H13V10H15V4Z');
+            pathD.setAttribute('d', "M24 0H0V30H24V0ZM2.00004 3H3.99994V16H2.00004V3ZM19.9999 3H22V12.9729L20 13L19.9999 3ZM14 17L11 21L13 23L12 24L8.00004 20L3.00004 27H22L19 23V3H17V21.081L14 17ZM14 3H16V11H14V3Z");
         
             // svgD.setAttribute('top', document.element.scrollHeight);
             svgD.appendChild(pathD);
