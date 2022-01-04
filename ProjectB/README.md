@@ -1,5 +1,6 @@
 ## Project B Scrolling Scrolls
 ### Idea iteration
+When starting this project, I observed various datasets from Smithsonian API and sketched the possibilities to display them. Below are the ideas for my observation. Finally, I decided to move forward with Scrolling Scrolls, the dataset of Chinese paintings from Freer Gallery of Art and Arthur M. Sackler Gallery.
 #### Color of Fashion
 * One color represents a woman's clothing from a painting.
 * ≈ 2000 objects.
